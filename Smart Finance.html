@@ -265,6 +265,28 @@
     }
     .strip-price.cyan { color: var(--accent-cyan); }
 
+/* ══════════════════════════════════════
+   PROBLEM TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+
+#problem .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan); /* wichtig: bleibt wie global */
+  font-family: var(--font);  /* erzwingt keine Änderung */
+  text-transform: uppercase; /* falls du Konsistenz willst */
+  letter-spacing: 0.18em;    /* wie original */
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#problem .section-title {
+  font-size: 28px;
+}
+
+#problem .section-subtitle {
+  font-size: 24px;
+}
+
     /* ══════════════════════════════════════
        PROBLEM
     ══════════════════════════════════════ */
@@ -344,17 +366,30 @@
     .flow-step h4 { font-size: 16px; font-weight: 700; margin-bottom: 5px; }
     .flow-step p  { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 
-    /* ══════════════════════════════════════
-       VISION (between Solution and Features)
-    ══════════════════════════════════════ */
-    #vision { background: var(--bg-secondary); text-align: center; }
-    .vision-inner { max-width: 780px; margin: 0 auto; }
-    .vision-title {
-      font-size: clamp(26px, 4vw, 46px); font-weight: 700;
-      line-height: 1.15; margin-bottom: 18px; letter-spacing: -0.01em;
-    }
-    .vision-sub { font-size: 17px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 52px; }
-    .vision-chart-wrap { height: 196px; }
+/* ══════════════════════════════════════
+   SOLUTION TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#solution .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#solution .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+#solution .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
 
     /* ══════════════════════════════════════
        FEATURES
@@ -369,6 +404,40 @@
     .feat-icon { font-size: 26px; margin-bottom: 14px; }
     .feat-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
     .feat-card p  { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+/* ══════════════════════════════════════
+   FEATURES TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#features .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#features .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+#features .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Feature Cards Typo Feintuning */
+#features .feat-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#features .feat-card p {
+  font-size: 13px;
+  line-height: 1.6;
+}
 
     /* ══════════════════════════════════════
        MARKET
@@ -385,6 +454,35 @@
     .mkt-item:hover { border-color: var(--cyan-border); }
     .mkt-dot { width: 6px; height: 6px; min-width: 6px; background: var(--accent-cyan); border-radius: 50%; margin-top: 9px; }
     .mkt-item p { font-size: 14px; color: var(--text-secondary); }
+
+/* ══════════════════════════════════════
+   MARKET TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#market .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#market .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+#market .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Market Items Feintuning */
+#market .mkt-item p {
+  font-size: 14px;
+  line-height: 1.6;
+}
 
     /* ══════════════════════════════════════
        COMPETITIVE — refined table
@@ -427,6 +525,45 @@
     .comp-callout-lbl { font-size: 10px; color: var(--accent-cyan); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 7px; }
     .comp-callout p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
 
+/* ══════════════════════════════════════
+   COMPETITIVE TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#competitive .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#competitive .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+#competitive .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Table Typography Refinement */
+#competitive .comp-row > div {
+  font-size: 13px;
+}
+
+#competitive .comp-head > div {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+/* Callout Text */
+#competitive .comp-callout p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
     /* ══════════════════════════════════════
        PRICING (full section)
     ══════════════════════════════════════ */
@@ -456,6 +593,53 @@
     .price-feature { display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--text-secondary); }
     .price-note { font-size: 11px; color: var(--text-muted); margin-top: 12px; }
 
+/* ══════════════════════════════════════
+   PRICING TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#pricing .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#pricing .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+#pricing .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Pricing Cards Typo Refinement */
+#pricing .price-tier {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+#pricing .price-amount {
+  font-size: 42px;
+  line-height: 1;
+}
+
+#pricing .price-period {
+  font-size: 12px;
+}
+
+#pricing .price-feature {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#pricing .price-note {
+  font-size: 11px;
+}
+
     /* ══════════════════════════════════════
        BUSINESS MODEL
     ══════════════════════════════════════ */
@@ -469,6 +653,40 @@
     .biz-icon { font-size: 30px; margin-bottom: 14px; }
     .biz-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
     .biz-card p  { font-size: 13px; color: var(--text-secondary); }
+
+/* ══════════════════════════════════════
+   BUSINESS MODEL TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#business .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#business .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+#business .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Business Cards Typo Refinement */
+#business .biz-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+#business .biz-card p {
+  font-size: 13px;
+  line-height: 1.6;
+}
 
     /* ══════════════════════════════════════
        TRUST
@@ -485,6 +703,40 @@
     .trust-icon { font-size: 22px; }
     .trust-item h4 { font-size: 13px; font-weight: 700; }
     .trust-item p  { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+/* ══════════════════════════════════════
+   TRUST TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#trust .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#trust .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+#trust .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Trust Grid Typography */
+#trust .trust-item h4 {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#trust .trust-item p {
+  font-size: 11px;
+  line-height: 1.5;
+}
 
     /* ══════════════════════════════════════
        TEAM (at the bottom)
@@ -506,6 +758,45 @@
     .team-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
     .team-role { font-size: 10px; color: var(--accent-cyan); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
     .team-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+/* ══════════════════════════════════════
+   TEAM TYPOGRAPHY OVERRIDES
+══════════════════════════════════════ */
+
+#team .section-label {
+  font-size: 40px;
+  color: var(--accent-cyan);
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--cyan-border);
+}
+
+#team .section-title {
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+#team .section-subtitle {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Team Card Typography */
+#team .team-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#team .team-role {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+#team .team-desc {
+  font-size: 12px;
+  line-height: 1.5;
+}
 
     /* ══════════════════════════════════════
        FINAL CTA
