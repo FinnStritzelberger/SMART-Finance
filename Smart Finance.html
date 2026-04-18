@@ -271,6 +271,8 @@
     #problem { background: var(--bg-secondary); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 48px; }
 
+
+
     .problem-items { display: flex; flex-direction: column; gap: 16px; }
     .p-item {
       display: flex; gap: 16px; padding: 18px 20px;
@@ -285,6 +287,8 @@
     }
     .p-text h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
     .p-text p  { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+
+
 
     /* Problem mock visual */
     .problem-mock {
@@ -959,20 +963,145 @@
     </div>
   </section>
 
-  <!-- ══ TEAM (at the bottom) ══ -->
-  <section id="team" class="section" style="background:var(--bg-secondary);">
-    <div class="container">
-      <div class="section-label reveal">The Team</div>
-      <h2 class="section-title reveal">Built by people who understand your data.</h2>
-      <div class="team-grid">
-        <div class="team-card reveal d1"><div class="team-avatar">SS</div><div class="team-name">Sarah Schneider</div><div class="team-role">CEO</div><div class="team-desc">Strategy &amp; Vision. Driving SMART Finance from concept to market leadership.</div></div>
-        <div class="team-card reveal d2"><div class="team-avatar">FS</div><div class="team-name">Finn Stritzelberger</div><div class="team-role">CFO</div><div class="team-desc">Analytics &amp; Pricing. Engineering financial models that make the business bulletproof.</div></div>
-        <div class="team-card reveal d3"><div class="team-avatar">NR</div><div class="team-name">Nathan Remmert</div><div class="team-role">CIO</div><div class="team-desc">Technology &amp; Security. Building infrastructure that earns user trust.</div></div>
-        <div class="team-card reveal d2"><div class="team-avatar">JK</div><div class="team-name">Joel Kuhlmann</div><div class="team-role">CMO</div><div class="team-desc">Marketing &amp; Growth. Turning early adopters into a movement.</div></div>
-        <div class="team-card reveal d3"><div class="team-avatar">CG</div><div class="team-name">Cemal Görmez</div><div class="team-role">COO</div><div class="team-desc">Operations &amp; Execution. Ensuring every promise gets delivered.</div></div>
+
+<!-- ══ TEAM ══ -->
+<section id="team" class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+
+    <div class="section-label">The Team</div>
+    <h2 class="section-title">Built by people who understand your data.</h2>
+
+    <div class="team-grid">
+
+      <!-- ROW 1 (3 people) -->
+      <div class="team-row top-row">
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="images/Sarah Anzug.png" alt="Sarah Schneider">
+          </div>
+          <div class="team-name">Sarah Schneider</div>
+          <div class="team-role">CEO</div>
+          <div class="team-desc">Strategy & Vision. Driving SMART Finance forward.</div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="images/Finn Anzug.png" alt="Finn Stritzelberger">
+          </div>
+          <div class="team-name">Finn Stritzelberger</div>
+          <div class="team-role">CFO</div>
+          <div class="team-desc">Analytics & Pricing. Building financial models.</div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="images/Joel Anzug.png" alt="Joel Kuhlmann">
+          </div>
+          <div class="team-name">Joel Kuhlmann</div>
+          <div class="team-role">CMO</div>
+          <div class="team-desc">Marketing & Growth. Scaling the product.</div>
+        </div>
+
       </div>
+
+      <!-- ROW 2 (2 people centered) -->
+      <div class="team-row bottom-row">
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="images/Nathan Anzug.png" alt="Nathan Remmert">
+          </div>
+          <div class="team-name">Nathan Remmert</div>
+          <div class="team-role">CIO</div>
+          <div class="team-desc">Technology & Security. Infrastructure lead.</div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="images/Cemal Anzug.png" alt="Cemal Görmez">
+          </div>
+          <div class="team-name">Cemal Görmez</div>
+          <div class="team-role">COO</div>
+          <div class="team-desc">Operations & Execution. Delivery focus.</div>
+        </div>
+
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  .team-grid{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    margin-top:48px;
+  }
+
+  .team-row{
+    display:grid;
+    gap:20px;
+  }
+
+  .top-row{
+    grid-template-columns:repeat(3, 1fr);
+  }
+
+  .bottom-row{
+    grid-template-columns:repeat(2, 260px);
+    justify-content:center;
+  }
+
+  .team-card{
+    background:var(--bg-card);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:16px;
+    padding:22px 16px;
+    text-align:center;
+    transition:0.3s ease;
+  }
+
+  .team-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(0,229,255,0.25);
+  }
+
+  .team-avatar{
+    width:92px;
+    height:92px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2px solid rgba(0,229,255,0.2);
+  }
+
+  .team-avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top;
+    transform:scale(1.08);
+  }
+
+  .team-name{
+    font-weight:700;
+    font-size:14px;
+  }
+
+  .team-role{
+    font-size:10px;
+    color:var(--accent-cyan);
+    margin-bottom:8px;
+    letter-spacing:0.12em;
+  }
+
+  .team-desc{
+    font-size:12px;
+    color:var(--text-muted);
+  }
+</style>
 
   <!-- ══ FINAL CTA ══ -->
   <section id="cta">
